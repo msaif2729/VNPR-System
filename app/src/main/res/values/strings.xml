@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VehiScan - VNPR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="puc_alert">Your Pollution Certificate Has Already Expired. Please Renew to Avoid Penalties</string>
+    <string name="ins_alert">Your Vehicle Insurance Has Already Expired. Please Renew to Avoid Penalties.</string>
+    <string name="fake_text">No Results Found! license plate number does not correspond to any registered vehicles.</string>
+    <string name="menu_opt_share">Share</string>
+    <string name="menu_opt_downloads">Add To My Downloads</string>
+    <string name="remove_myvehicle">Remove From My Vehicle</string>
+</resources>

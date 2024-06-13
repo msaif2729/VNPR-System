@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verification">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_30sdp"
+        android:paddingBottom="@dimen/_50sdp"
+        android:paddingRight="@dimen/_25sdp"
+        android:paddingLeft="@dimen/_25sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Verification Code"
+            android:fontFamily="@font/ubuntubold"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity=""
+            android:gravity="center"
+            android:weightSum="6"
+            android:layout_marginTop="@dimen/_20sdp">
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/verifydesign"
+                android:fontFamily="@font/ubuntubold"/>
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/verifydesign"
+                android:fontFamily="@font/ubuntubold"/>
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/verifydesign"
+                android:fontFamily="@font/ubuntubold"/>
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/verifydesign"
+                android:fontFamily="@font/ubuntubold"/>
+            <EditText
+                android:id="@+id/otp5"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/verifydesign"
+                android:fontFamily="@font/ubuntubold"/>
+            <EditText
+                android:id="@+id/otp6"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:fontFamily="@font/ubuntubold"
+                android:background="@drawable/verifydesign"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txttimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntumedium"
+            android:text="01:00"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:id="@+id/phn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntubold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:text="We send verification code to your \n 7977****70, You can check your message box "
+            android:layout_marginTop="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:text="I didn't receive the code?"
+                android:fontFamily="@font/ubuntumedium"/>
+            <TextView
+                android:id="@+id/sendagain"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Again"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/ubuntubold"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/shape"
+            android:fontFamily="@font/ubuntumedium"
+            android:text="VERIFY"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp" />
+
+            
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

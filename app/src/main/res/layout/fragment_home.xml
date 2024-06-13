@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/home"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_20sdp"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            >
+            <org.opencv.android.JavaCameraView
+                android:id="@+id/jcameraview_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/camera_design"
+                android:visibility="visible"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                />
+            <LinearLayout
+                android:id="@+id/open_camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/camera"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click to Open Camera"
+                    android:gravity="center"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/selectimg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:background="@drawable/shape"
+            android:fontFamily="@font/ubuntumedium"
+            android:drawableLeft="@drawable/baseline_add_a_photo_24"
+            android:text="Select Image From Gallery"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"/>
+        <EditText
+            android:id="@+id/vehicle_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_design2"
+            android:fontFamily="@font/ubuntumedium"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:hint="Eg : MH46BX2200"
+            android:editable="false"
+            android:enabled="false"
+            android:textColorHint="@color/gray"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/search_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/ubuntumedium"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"/>
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                />
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Challan"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/ubuntubold"
+            />
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/tirc_no"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:hint="Enter RC Number"-->
+<!--            android:textColorHint="@color/gray"-->
+<!--            app:boxBackgroundMode="outline"-->
+<!--            >-->
+<!--            <EditText-->
+<!--                android:id="@+id/rc_no"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_2sdp"-->
+<!--                android:background="@drawable/edittext_design1"-->
+<!--                android:fontFamily="@font/ubuntumedium"-->
+<!--                android:inputType="text"-->
+<!--                android:padding="@dimen/_10sdp"-->
+<!--                android:textColor="@color/black" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/tichassis"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:hint="Enter Last 5 Digits of Chassis No"-->
+<!--            android:textColorHint="@color/gray"-->
+<!--            app:boxBackgroundMode="outline"-->
+<!--            >-->
+<!--            <EditText-->
+<!--                android:id="@+id/chassis"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_2sdp"-->
+<!--                android:background="@drawable/edittext_design1"-->
+<!--                android:fontFamily="@font/ubuntumedium"-->
+<!--                android:inputType="text"-->
+<!--                android:padding="@dimen/_10sdp"-->
+<!--                android:textColor="@color/black" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <Button
+            android:id="@+id/search_challan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/shape"
+            android:fontFamily="@font/ubuntumedium"
+            android:text="Check For Challan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="verify_next" type="id"/>
+    <item name="verify_register" type="id"/>
+    <item name="remove_my_vehicle" type="id"/>
+</resources>

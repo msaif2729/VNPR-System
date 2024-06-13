@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_30sdp"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/chk"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/checklist"
+            android:layout_gravity="center"
+
+            />
+        <TextView
+            android:id="@+id/cong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congratulation!"
+            android:layout_below="@id/chk"
+            android:textSize="@dimen/_20sdp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You Successfully create new password"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/shape"
+            android:fontFamily="@font/ubuntumedium"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"/>
+    </LinearLayout>
+</RelativeLayout>

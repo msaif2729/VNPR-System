@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStarted"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/ubuntumedium"
+        android:text="Your Personal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntubold"
+        android:text="Vehicle Assistant"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <TextView
+        android:id="@+id/txtchng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:fontFamily="@font/ubuntubold"
+        android:text="VehiScan - VNPR"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <ImageView
+        android:id="@+id/imgchng"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_230sdp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtchng" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/shape"
+        android:fontFamily="@font/ubuntubold"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgchng"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/regis"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="24dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/regis"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            app:layout_constraintVertical_bias="0.46" />
+
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp"
+            android:fontFamily="@font/ubuntubold"
+            android:text="OR"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/regis"
+            app:layout_constraintEnd_toStartOf="@+id/v2"
+            app:layout_constraintHorizontal_bias="0.648"
+            app:layout_constraintStart_toEndOf="@+id/v1"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginRight="24dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/regis"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            app:layout_constraintVertical_bias="0.44" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/regis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/shape"
+        android:fontFamily="@font/ubuntubold"
+        android:gravity="center"
+        android:text="REGISTER"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "243760817837",
+    "project_id": "vnpr-ccce9",
+    "storage_bucket": "vnpr-ccce9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243760817837:android:4b906674d8198c22c48824",
+        "android_client_info": {
+          "package_name": "com.example.final_mp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNm7mwtvaYT0SnyzyxlxmUk6rKrHJ9TSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243760817837:android:ada59711293920bac48824",
+        "android_client_info": {
+          "package_name": "com.example.vnpr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNm7mwtvaYT0SnyzyxlxmUk6rKrHJ9TSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

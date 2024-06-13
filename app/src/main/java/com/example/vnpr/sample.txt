@@ -1,0 +1,519 @@
+ Imgproc.threshold(eImag,thresImage,128,255,Imgproc.THRESH_BINARY);
+//                Imgproc.adaptiveThreshold(eImag,thresImage,155,Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,9,9);
+
+//
+//
+//
+//                Mat hrarchy = new Mat();
+//                contours = new ArrayList<MatOfPoint>();
+//                Imgproc.findContours(eImag1,contours,hrarchy,Imgproc.RETR_TREE,Imgproc.CHAIN_APPROX_SIMPLE,new Point(0,0));
+//
+//
+//                // Iterate through contours and filter based on criteria
+//                for (MatOfPoint contour : contours) {
+//                    Rect boundingRect = Imgproc.boundingRect(contour);
+//                    double aspectRatio = (double) boundingRect.width / boundingRect.height;
+//
+//                    // Add your criteria to filter contours
+//                    if (aspectRatio > 2 && aspectRatio < 5 && boundingRect.width > 150 && boundingRect.height > 120) {
+//                        // This contour may correspond to a number plate
+//                        Imgproc.rectangle(eImag1, new Point(boundingRect.x, boundingRect.y), new Point(boundingRect.x + boundingRect.width, boundingRect.y + boundingRect.height), new Scalar(0, 0, 0), 4);
+////                Imgproc.putText(eImag1, "Number Plate", boundingRect.tl(), Imgproc.FONT_HERSHEY_SIMPLEX, 2, new Scalar(0.255, 255), 4);
+//                    }
+//
+//                }
+
+
+
+    Mat adp = new Mat();
+//                Imgproc.adaptiveThreshold(eImag1, adp, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY, 15, 15);
+
+
+//                Imgproc.Canny(thresImage,thresImage, CannyThresholdValue, CannyThresholdValue*2, 3, false);
+
+
+ //Gray scale Conversion
+//                Imgproc.cvtColor(rgba,rgba,Imgproc.COLOR_RGBA2GRAY);
+//
+//
+//                //Median Blurring
+//                Imgproc.medianBlur(rgba, rgba, 5);
+//
+//                //Histogram Equalization
+//                Imgproc.equalizeHist(rgba,rgba);
+//
+//
+//                //Adaptive Thresholding
+//                Imgproc.adaptiveThreshold(rgba,rgba,150,Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,9,9);
+//
+//                //Erode & dilate
+//                Mat kernel = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size((2*2) + 1, (2*2)+1));
+//                Imgproc.erode(rgba,rgba,kernel);
+////                Imgproc.dilate(rgba,rgba,kernel);
+//
+//
+//                //Histogram Equalization
+//                Imgproc.equalizeHist(rgba,gray);
+//
+//                //Contours
+//                Mat minter = new Mat();
+//                Mat hrarchy = new Mat();
+//                MatOfPoint p = null;
+//
+//                contours = new ArrayList<MatOfPoint>();
+//
+//                //Contours -> Canny
+//                Imgproc.Canny(gray,minter,80,100);
+//                Imgproc.findContours(minter,contours,hrarchy,Imgproc.RETR_TREE,Imgproc.CHAIN_APPROX_SIMPLE,new Point(0,0));
+//                hrarchy.release();
+//
+//                Log.d("Mohammed Saif", String.valueOf(contours.size()));
+//
+//                for(int i = 0 ;i <contours.size();i++)
+//                {
+//                    //Minimum size allowed for consideration
+//                    MatOfPoint2f acurve = new MatOfPoint2f();
+//                    MatOfPoint2f c2f = new MatOfPoint2f(contours.get(i).toArray());
+//
+//                    //Processing of mMop2f1 which is in type of MatOfPoint2f
+//                    double adistance = Imgproc.arcLength(c2f,true)*0.01;
+//                    Imgproc.approxPolyDP(c2f,acurve,adistance,true);
+//
+//                    //convert back to matOfPoint
+//                    p = new MatOfPoint(acurve.toArray());
+//
+//                    //Get bounding rect
+//                    Rect rect = Imgproc.boundingRect(p);
+//
+//                    double he = rect.height;
+//                    double wi = rect.width;
+//
+//
+//
+//                    if(he > 100 && wi>200)
+//                    {
+//                        Imgproc.rectangle(gray,new Point(rect.x,rect.y),new Point(rect.x+rect.width,rect.y+rect.height),new Scalar(255,0,25),4);
+////                Imgproc.putText(mat,"Number Plate",rect.tl(),Imgproc.FONT_HERSHEY_SIMPLEX,2,new Scalar(0.255,255),4);
+//
+//                    }
+//
+//
+//                }
+//                Imgproc.medianBlur(grayImage,blurImage,5);
+
+
+
+
+MainActivity
+/        minter = new Mat();
+//
+//        Imgproc.Canny(mat,minter,10,10);
+//        hrarchy.release();
+//
+//        for(int i = 0 ;i <contours.size();i++)
+//        {
+////            Toast.makeText(this, contours.size(), Toast.LENGTH_SHORT).show();
+//            //Minimum size allowed for consideration
+//            MatOfPoint2f acurve = new MatOfPoint2f();
+//            MatOfPoint2f c2f = new MatOfPoint2f(contours.get(i).toArray());
+//
+//            //Processing of mMop2f1 which is in type of MatOfPoint2f
+//            double adistance = Imgproc.arcLength(c2f,true)*0.01;
+//            Imgproc.approxPolyDP(c2f,acurve,adistance,true);
+//
+//            //convert back to matOfPoint
+//            MatOfPoint p = new MatOfPoint(acurve.toArray());
+//
+//            //Get bounding rect
+//            Rect rect = Imgproc.boundingRect(p);
+//
+//            double h = rect.height;
+//            double w = rect.width;
+//
+//            if(h > 100 && w>250)
+//            {
+//                Imgproc.rectangle(mat,new Point(rect.x,rect.y),new Point(rect.x+rect.width,rect.y+rect.height),new Scalar(0,0,0),4);
+//                Imgproc.putText(mat,"Number Plate",rect.tl(),Imgproc.FONT_HERSHEY_SIMPLEX,2,new Scalar(0.255,255),4);
+//
+//            }
+//
+//        }
+
+
+//        // Convert to grayscale
+//        Mat grayImage = new Mat();
+//        Imgproc.cvtColor(inputImage, grayImage, Imgproc.COLOR_BGR2GRAY);
+//
+//// Apply Gaussian blur
+//        Mat blurredImage = new Mat();
+//        Imgproc.GaussianBlur(grayImage, blurredImage, new Size(5, 5), 0);
+//
+//// Apply histogram equalization
+//        Mat equalizedImage = new Mat();
+//        Imgproc.equalizeHist(blurredImage, equalizedImage);
+//
+//// Binarize the image
+//        Mat binaryImage = new Mat();
+//        Imgproc.threshold(equalizedImage, binaryImage, 128, 255, Imgproc.THRESH_BINARY);
+//
+//// Find contours
+//        List<MatOfPoint> contours = new ArrayList<>();
+//        Imgproc.findContours(binaryImage, contours, new Mat(), Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
+//
+//// Iterate through contours and filter based on criteria
+//        for (MatOfPoint contour : contours) {
+//            Rect rect = Imgproc.boundingRect(contour);
+//            double aspectRatio = (double) rect.width / rect.height;
+//
+//            // Add your criteria to filter contours
+//            if (aspectRatio > 2 && aspectRatio < 5 && rect.width > 50 && rect.height > 20) {
+//                // This contour may correspond to a number plate
+//                // Implement further processing or visualization as needed
+//
+//                Imgproc.rectangle(binaryImage,new Point(rect.x,rect.y),new Point(rect.x+rect.width,rect.y+rect.height),new Scalar(0,0,0),4);
+//                Imgproc.putText(binaryImage,"Number Plate",rect.tl(),Imgproc.FONT_HERSHEY_SIMPLEX,2,new Scalar(0.255,255),4);
+//            }
+//        }
+
+
+
+
+
+//        Mat grayImage = new Mat();
+//        Imgproc.cvtColor(inputImage,grayImage,Imgproc.COLOR_RGBA2GRAY);
+//
+//        Mat blurImage = new Mat();
+//        Imgproc.medianBlur(grayImage,blurImage,5);
+//
+//        Mat eImag = new Mat();
+//        Imgproc.equalizeHist(blurImage,eImag);
+//
+//        Mat thresImage = new Mat();
+////        Imgproc.threshold(eImag,thresImage,128,255,Imgproc.THRESH_BINARY);
+//        Imgproc.adaptiveThreshold(eImag,thresImage,155,Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,9,2);
+//
+//        Mat morphImage = new Mat();
+//        Mat kernel = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));
+//        Imgproc.erode(thresImage,morphImage,kernel);
+//        Imgproc.dilate(morphImage,morphImage,kernel);
+////        Imgproc.morphologyEx(thresImage, morphImage, Imgproc.MORPH_CLOSE, kernel);
+//
+//
+//        Mat eImag1 = new Mat();
+//        Imgproc.equalizeHist(morphImage,eImag1);
+//
+//
+//        hrarchy = new Mat();
+//        contours = new ArrayList<MatOfPoint>();
+//        Imgproc.findContours(eImag1,contours,hrarchy,Imgproc.RETR_TREE,Imgproc.CHAIN_APPROX_SIMPLE,new Point(0,0));
+//
+//
+//        // Iterate through contours and filter based on criteria
+//        for (MatOfPoint contour : contours) {
+//            Rect boundingRect = Imgproc.boundingRect(contour);
+//            double aspectRatio = (double) boundingRect.width / boundingRect.height;
+//
+//            // Add your criteria to filter contours
+//            if (aspectRatio > 2 && aspectRatio < 5 && boundingRect.width > 150 && boundingRect.height > 120) {
+//                // This contour may correspond to a number plate
+//                Imgproc.rectangle(eImag1, new Point(boundingRect.x, boundingRect.y), new Point(boundingRect.x + boundingRect.width, boundingRect.y + boundingRect.height), new Scalar(0, 0, 0), 4);
+//                Imgproc.putText(eImag1, "Number Plate", boundingRect.tl(), Imgproc.FONT_HERSHEY_SIMPLEX, 2, new Scalar(0.255, 255), 4);
+//            }
+//
+//        }
+
+
+
+
+
+In the context of image preprocessing, contrast enhancement refers to the process of increasing the visual difference between the darkest and lightest areas of an image. This improvement in contrast helps to make the image more visually appealing and easier to analyze by enhancing the visibility of details.
+Contrast enhancement techniques are often applied during image preprocessing to improve the quality of images before performing further analysis or processing tasks. One of the method for image contrastment is gamma correction. Gamma correction is a nonlinear operation that adjusts the intensity values of an image to compensate for differences in display or illumination conditions. By applying a power-law transformation to the pixel values, gamma correction can improve the overall brightness and contrast of an image.Thus we use the addweighted method of OpenCV for processing of the image which is captured in dim light.
+	The addWeighted() method is a versatile tool for blending images together, adjusting their brightness, and creating various visual effects in OpenCV.
+Expression used to compute the weighted sum at each pixel location :
+dst(x,y)=src1(x,y)×alpha+src2(x,y)×beta+gamma
+The gamma value in the above expression can bs used to control the brightness of the resulting image.
+
+
+
+
+
+
+
+
+
+
+
+MainActivity
+package com.example.vnpr;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.mlkit.vision.common.InputImage;
+import com.google.mlkit.vision.text.Text;
+import com.google.mlkit.vision.text.TextRecognition;
+import com.google.mlkit.vision.text.TextRecognizer;
+import com.google.mlkit.vision.text.devanagari.DevanagariTextRecognizerOptions;
+
+import org.opencv.android.BaseLoaderCallback;
+import org.opencv.android.CameraBridgeViewBase;
+import org.opencv.android.JavaCamera2View;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.Core;
+import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
+import org.opencv.core.Point;
+import org.opencv.core.Rect;
+import org.opencv.core.Scalar;
+import org.opencv.core.Size;
+import org.opencv.dnn.Dnn;
+import org.opencv.imgproc.Imgproc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class MainActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
+
+    CameraBridgeViewBase cameraBridgeViewBase;
+    BaseLoaderCallback baseLoaderCallback;
+    private TextRecognizer textRecognizer;
+    int counter = 0;
+    Button capture,next;
+    Mat inputImage;
+    Bitmap bitmap;
+
+    TextView text2;
+
+    private Mat mrgba;
+    private Mat mgray;
+    private Mat minter;
+    Mat hrarchy;
+    List<MatOfPoint> contours;
+    private int w,h;
+
+
+    class Async extends AsyncTask<Bitmap,Bitmap,Bitmap>
+    {
+
+        @Override
+        protected Bitmap doInBackground(Bitmap... bitmaps) {
+
+//            try {
+//                Thread.sleep(1000);
+
+                InputImage image = InputImage.fromBitmap(bitmaps[0],0);
+                Task<Text> r = textRecognizer.process(image)
+                        .addOnSuccessListener(new OnSuccessListener<Text>() {
+                            @Override
+                            public void onSuccess(Text text) {
+                                Log.d("Mohammed Saif Ansari", text.getText());
+//                            Toast.makeText(MainActivity.this, text.getText(), Toast.LENGTH_LONG).show();
+//                                    text2.setText(text.getText());
+//                                Intent intent = new Intent(MainActivity.this, com.example.vnpr.Text.class);
+//
+//                                intent.putExtra("Converted",text.getText());
+//                                startActivity(intent);
+                                Log.d("Converted",text.getText());
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.e("Ansari Mohammed Saif ", String.valueOf(e));
+                            }
+                        });
+
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+
+            return bitmaps[0];
+        }
+    }
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textRecognizer = TextRecognition.getClient(new DevanagariTextRecognizerOptions.Builder().build());
+
+        if(OpenCVLoader.initDebug())
+        {
+            Toast.makeText(this, "OpenCV Loaded", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(this, "OpenCV Not Loaded", Toast.LENGTH_SHORT).show();
+        }
+
+        capture  = findViewById(R.id.capture);
+        next = (Button)findViewById(R.id.next);
+        cameraBridgeViewBase = (JavaCamera2View) findViewById(R.id.jcameraview);
+        cameraBridgeViewBase.setVisibility(SurfaceView.VISIBLE);
+        cameraBridgeViewBase.setCvCameraViewListener((CameraBridgeViewBase.CvCameraViewListener2) this);
+
+        baseLoaderCallback = new BaseLoaderCallback(this)
+        {
+            @Override
+            public void onManagerConnected(int status) {
+                super.onManagerConnected(status);
+                if(status==BaseLoaderCallback.SUCCESS)
+                {
+                    cameraBridgeViewBase.setCameraPermissionGranted();
+                    cameraBridgeViewBase.enableView();
+                }
+                else
+                {
+                    super.onManagerConnected(status);
+                }
+            }
+        };
+
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,testing.class));
+            }
+        });
+
+
+
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        if(OpenCVLoader.initDebug())
+        {
+//            Toast.makeText(this, "OpenCV Loaded", Toast.LENGTH_SHORT).show();
+            baseLoaderCallback.onManagerConnected(baseLoaderCallback.SUCCESS);
+        }
+        else
+        {
+            Toast.makeText(this, "OpenCV Not Loaded", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(cameraBridgeViewBase!=null)
+        {
+            cameraBridgeViewBase.disableView();
+        }
+    }
+
+    @Override
+    public void onCameraViewStarted(int width, int height) {
+        inputImage = new Mat(890,840, CvType.CV_8UC4);
+        w = inputImage.width();
+        h = inputImage.height();
+    }
+
+    @Override
+    public void onCameraViewStopped() {
+
+
+    }
+
+    @Override
+    public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
+         inputImage = inputFrame.rgba();
+
+        Mat grayImage = new Mat();
+        Imgproc.cvtColor(inputImage,grayImage,Imgproc.COLOR_BGR2GRAY);
+
+//        Mat eImag1 = new Mat();
+//        Imgproc.equalizeHist(grayImage,eImag1);f
+
+        Mat blurImage = new Mat();
+        Imgproc.blur(grayImage, blurImage, new Size(3.7, 3.7), new Point(-1, -1));
+
+//        Mat thresImage = new Mat();
+//        Imgproc.threshold(grayImage, thresImage, 120, 255, Imgproc.THRESH_BINARY + Imgproc.THRESH_OTSU);
+//
+        Mat morphImage = new Mat();
+        Mat kernel = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size((2*2) , (2*2)));
+        Imgproc.erode(blurImage,morphImage,kernel);
+//        Imgproc.dilate(blurImage,morphImage,kernel);
+//
+
+        Mat we = new Mat();
+        Core.addWeighted(morphImage,2,morphImage,2,2.5,we,0);
+
+//        Mat claheImage = new Mat();
+//        Imgproc.createCLAHE(2.0, new Size(8, 8)).apply(we, claheImage);
+
+        int w = inputImage.width();
+        int h = inputImage.height();
+
+        bitmap = Bitmap.createBitmap(w,h,Bitmap.Config.RGB_565);
+        Utils.matToBitmap(we,bitmap);
+
+//        capture.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+
+
+            if(bitmap!=null)
+            {
+
+                Async async = new Async();
+                async.doInBackground(bitmap);
+
+
+//                InputImage image = InputImage.fromBitmap(bitmap,0);
+//                Task<Text> r = textRecognizer.process(image)
+//                        .addOnSuccessListener(new OnSuccessListener<Text>() {
+//                            @Override
+//                            public void onSuccess(Text text) {
+//                                Log.d("Mohammed Saif Ansari", text.getText());
+////                            Toast.makeText(MainActivity.this, text.getText(), Toast.LENGTH_LONG).show();
+////                                    text2.setText(text.getText());
+////                                Intent intent = new Intent(MainActivity.this, com.example.vnpr.Text.class);
+////
+////                                intent.putExtra("Converted",text.getText());
+////                                startActivity(intent);
+//                                Log.d("Converted",text.getText());
+//                            }
+//                        }).addOnFailureListener(new OnFailureListener() {
+//                            @Override
+//                            public void onFailure(@NonNull Exception e) {
+//                                Log.e("Ansari Mohammed Saif ", String.valueOf(e));
+//                            }
+//                        });
+            }
+
+
+
+//            }
+//        });
+        return we;
+
+    }
+
+}
